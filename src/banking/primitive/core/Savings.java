@@ -21,7 +21,6 @@ public class Savings extends Account {
 			if (balance >= 0.0f) {
 				setState(State.OPEN);
 			}
-			return true //#048 Missing Return Value
 		}
 		return false;
 	}
@@ -45,7 +44,7 @@ public class Savings extends Account {
 		return false;
 	}
 	
-	public String getType() { return "Checking"; }
+	public String getType() { return "Savings"; } //Bug 35: Incorrect return
 
 	public String toString() {
 		return "Savings: " + getName() + ": " + getBalance();
